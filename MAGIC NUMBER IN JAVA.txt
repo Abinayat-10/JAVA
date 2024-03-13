@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		 Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int m=n;
+	    int sum1=0;
+	    int s=0;
+	    while(n>0){
+	       int div=n%10;
+	        sum1=sum1+div;
+	        n=n/10;
+	    }int r1=sum1;
+	    while(r1>0){
+	     int r=r1%10;
+	      s=r+s*10;
+	      r1=r1/10;
+	    }
+	    System.out.println(s+" "+sum1);
+	    int result=sum1*s;
+	    if(m==result){
+	        System.out.println("magic number");
+	    }
+	    else{
+	         System.out.println("no");
+	    }
+	}
+}
